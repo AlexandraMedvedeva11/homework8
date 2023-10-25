@@ -7,67 +7,78 @@
 
 import UIKit
 
-
 class Menu {
-    var type: String = ""
-    var coast: Int = 0
-    func food () {
+    init(snacks: Position, dishes: Position, drinks: Position, desert: Position) {
+        self.snacks = snacks
+        self.dishes = dishes
+        self.drinks = drinks
+        self.desert = desert
     }
+    var snacks: Position
+    var dishes: Position
+    var drinks: Position
+    var desert: Position
 }
-
-class Snacks: Menu {
-    override init () {
-        super.init()
-        type = "Chips"
+    
+    class Position {
+        var type: String = ""
+        var coast: Int = 0
+        func food () {
+        }
     }
-    override func food () {
-        print (type, coast)
+    
+    class Snacks: Position {
+        override init () {
+            super.init()
+            type = "Chips"
+        }
+        override func food () {
+            print (type, coast)
+        }
     }
-}
-
-class Dishes: Menu {
-    override init () {
-        super.init()
-        type = "Burger"
+    
+    class Dishes: Position {
+        override init () {
+            super.init()
+            type = "Burger"
+        }
+        override func food () {
+            print (type, coast)
+        }
     }
-    override func food () {
-        print (type, coast)
+    
+    class Drinks: Position {
+        override init () {
+            super.init()
+            type = "Cola"
+        }
+        override func food () {
+            print (type, coast)
+        }
     }
-}
-
-class Drinks: Menu {
-    override init () {
-        super.init()
-        type = "Cola"
+    
+    class Desert: Position {
+        override init () {
+            super.init()
+            type = "IceCream"
+        }
+        override func food () {
+            print (type, coast)
+        }
     }
-    override func food () {
-        print (type, coast)
-    }
-}
-
-class Desert: Menu {
-    override init () {
-        super.init()
-        type = "IceCream"
-    }
-    override func food () {
-        print (type, coast)
-    }
-}
-
-let Chips = Snacks()
-Chips.coast = 7
-
-let Burger = Dishes()
-Burger.coast = 15
-
-let Cola = Drinks()
-Drinks.coast = 5
-
-let IceCream = Desert()
-IceCream.coast = 9
-
-
+    
+    let Chips = Snacks()
+    Chips.coast = 7
+    
+    let Burger = Dishes()
+    Burger.coast = 15
+    
+    let Cola = Drinks()
+    Cola.coast = 5
+    
+    let IceCream = Desert()
+    IceCream.coast = 9
+    
 
 
 
