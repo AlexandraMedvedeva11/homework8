@@ -67,6 +67,11 @@ class Menu {
         }
     }
 func dosmth () {
+    
+    func posit (position1: Position) {
+        print(position1)
+    }
+    
     let Chips = Snacks()
     Chips.type = "Chips"
     Chips.coast = 7
@@ -83,9 +88,6 @@ func dosmth () {
     IceCream.type = "IceCream"
     IceCream.coast = 9
     
-    func Position(type: String, coast: Int) {
-        print (type, coast)
-    }
     
 }
 
