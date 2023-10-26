@@ -66,7 +66,7 @@ class Menu {
             print (type, coast)
         }
     }
-    
+func dosmth () {
     let Chips = Snacks()
     Chips.coast = 7
     
@@ -79,6 +79,6 @@ class Menu {
     let IceCream = Desert()
     IceCream.coast = 9
     
-
+}
 
 
