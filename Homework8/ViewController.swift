@@ -68,16 +68,24 @@ class Menu {
     }
 func dosmth () {
     let Chips = Snacks()
+    Chips.type = "Chips"
     Chips.coast = 7
     
     let Burger = Dishes()
+    Burger.type = "Burger"
     Burger.coast = 15
     
     let Cola = Drinks()
+    Cola.type = "Cola"
     Cola.coast = 5
     
     let IceCream = Desert()
+    IceCream.type = "IceCream"
     IceCream.coast = 9
+    
+    func Position(type: String, coast: Int) {
+        print (type, coast)
+    }
     
 }
 
